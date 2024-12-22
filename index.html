@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venkatesh Tomar - Project Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Venkatesh Tomar</h1>
+        <p>B.Tech (CSE) | NIT Patna | Aspiring Machine Learning Engineer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>I am a passionate final-year B.Tech student specializing in Machine Learning, Data Analytics, and Software Development. I thrive on solving complex problems and creating impactful solutions.</p>
+        </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <article class="project">
+                <h3>Spam Email Detection Model</h3>
+                <p>Developed a real-time system to fetch emails from Gmail and classify them as spam or not spam. Upon receiving an email from a specified email address, the system promptly collects the body of the message. This allows for dynamic and up-to-date training of the model. The model itself is trained on a comprehensive dataset comprising email messages that have been meticulously labeled as either spam or ham (non-spam). By continuously gathering new email data in real-time, the system ensures that the model remains robust and adept at discerning between legitimate and unsolicited messages, thus enhancing its effectiveness in combatting spam.</p>
+                <pre><code>from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+
+# Example snippet
+vectorizer = CountVectorizer()
+X_train = vectorizer.fit_transform(email_texts)
+model = MultinomialNB()
+model.fit(X_train, labels)</code></pre>
+                <p>Achieved an accuracy of 96% with precision: 95.8% and recall: 96.7%.</p>
+            </article>
+            <article class="project">
+                <h3>StarCraft 2 RL Agent</h3>
+                <p>Implemented Reinforcement Learning algorithms like PPO and DQN to train agents in StarCraft 2. Application of reinforcement learning (RL) algorithms in real time strategy games.
+                    – Tools & technologies used: PySC2, Stable Baselines 3, Starcraft 2
+                    – Trained a Reinforcement Learning agent using Deep Q Network and Proximal Policy Optimization and after
+                    training over 1 lakh episodes achieved a 78% win rate against inbuilt medium bot with a precison of 76.7%.</p>
+                <pre><code>from stable_baselines3 import PPO
+
+# Example snippet
+env = StarCraft2Env()
+model = PPO("MlpPolicy", env, verbose=1)
+model.learn(total_timesteps=100000)</code></pre>
+                <p>Achieved a 78% win rate against medium difficulty bots.</p>
+            </article>
+            <article class="project">
+                <h3>Stock Predicting AI Model</h3>
+                <p>Created a hybrid ML model combining historical stock data with sentiment analysis. Predict future Stock Prices and Trends.
+                    – Tools & technologies used: Stable baselines 3, pysc2, tensorflow.
+                    – Implemented a comprehensive Machine Learning solution that integrates Sentiment Analysis with Historical Stock
+                    Data from 100+ companies to predict Stock Prices.</p>
+                <pre><code>from transformers import BertTokenizer, BertForSequenceClassification
+
+# Sentiment Analysis Example
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+inputs = tokenizer("Stock prices are rising", return_tensors="pt")
+model = BertForSequenceClassification.from_pretrained('bert-base-uncased')
+outputs = model(**inputs)</code></pre>
+                <p>Predict future Stock Prices and Trends.
+                    – Tools & technologies used: Stable baselines 3, pysc2, tensorflow.
+                    – Implemented a comprehensive Machine Learning solution that integrates Sentiment Analysis with Historical Stock
+                    Data from 100+ companies to predict Stock Prices.</p>
+            </article>
+        </section>
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming: Python, Java, C++, JavaScript</li>
+                <li>Data Analysis: Pandas, NumPy, Matplotlib, Seaborn</li>
+                <li>Machine Learning: TensorFlow, PyTorch, Scikit-learn</li>
+                <li>Tools: Git, Jupyter, VS Code</li>
+            </ul>
+        </section>
+        <section id="achievements" class="section">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Global Rank 102 in CodeChef Starters 72 Division 4</li>
+                <li>Solved 500+ DSA problems on LeetCode and GeeksforGeeks</li>
+                <li>Led the Discipline Team during TCF 2023</li>
+            </ul>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:venkatesht.ug21.cs@nitp.ac.in">venkatesht.ug21.cs@nitp.ac.in</a></p>
+            <p>GitHub: <a href="https://github.com/venky0112">github.com/venky0112</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/venkatesh-tomar-460571280">linkedin.com/in/venkatesh-tomar</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Venkatesh Tomar</p>
+    </footer>
+</body>
+</html>
